@@ -20,3 +20,4 @@ semantic_text_splitter
 SpeechRecognition
 streamlit
 typing_extensions
+streamlit-aggrid
