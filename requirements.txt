@@ -21,3 +21,4 @@ SpeechRecognition
 streamlit
 typing_extensions
 streamlit-aggrid
+pillow
