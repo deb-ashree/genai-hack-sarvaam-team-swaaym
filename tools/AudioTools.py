@@ -48,30 +48,30 @@ class WhisperAudioTool(BaseTool):
 
 import speech_recognition as sr
 
-def textToAudio(text, filePath, fileName, gender):
-    if gender == "male":
-        voice = "alloy"
-    elif gender == "female":
-        voice = "nova"
-    makeDir(filePath)
-    print("File name : "+filePath+fileName)
-    audioFile = getFilePath(filePath, fileName)
-    print(audioFile)
-    with client.audio.speech.with_streaming_response.create(
-    model=model_tts,
-    voice=voice,
-    input=text
-    ) as  response:
-        response.stream_to_file(audioFile)
-    time.sleep(20)
-    s3AudioFile = getS3FilePath(audioFile)
-    return s3AudioFile
+# def textToAudio(text, filePath, fileName, gender):
+#     if gender == "male":
+#         voice = "alloy"
+#     elif gender == "female":
+#         voice = "nova"
+#     makeDir(filePath)
+#     print("File name : "+filePath+fileName)
+#     audioFile = getFilePath(filePath, fileName)
+#     print(audioFile)
+#     with client.audio.speech.with_streaming_response.create(
+#     model=model_tts,
+#     voice=voice,
+#     input=text
+#     ) as  response:
+#         response.stream_to_file(audioFile)
+#     time.sleep(20)
+#     s3AudioFile = getS3FilePath(audioFile)
+#     return s3AudioFile
 
-def recordedAudioToText(fileName):
-    transcription = client.audio.transcriptions.create(
-    model=model_stt, 
-    file=open(fileName,"rb"))
-    return transcription.text
+# def recordedAudioToText(fileName):
+#     transcription = client.audio.transcriptions.create(
+#     model=model_stt, 
+#     file=open(fileName,"rb"))
+#     return transcription.text
 
 def getAudio():
     r = sr.Recognizer()
