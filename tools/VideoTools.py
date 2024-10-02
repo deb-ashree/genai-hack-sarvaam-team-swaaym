@@ -9,7 +9,7 @@ import asyncio
 from requests import HTTPError
 
 
-load_dotenv(os.getcwd()+"/course_creation/local.env")
+load_dotenv(os.getcwd()+"/local.env")
 
 
 did_api_key = os.getenv("D-ID_API_KEY")
@@ -42,7 +42,6 @@ async def getSummaryVideo(audioUrl):
     print('postCreateDIDTalkVideo start')
     id = postCreateDIDTalkVideo(audioUrl)
     await asyncio.sleep(240)
-    # id ="clp_c4nDNYNwgLFwssfKiHn5-"
     videoURL = getTalkVideo(id)
 
     print('VideoURL received '+videoURL)
