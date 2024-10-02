@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 import google.generativeai as genai
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_google_vertexai import ChatVertexAI
 
 from graphs.content_collation_subgraph import CourseSubSectionFlow
 from data_models.data_collation_object import TopicState
