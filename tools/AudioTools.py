@@ -6,7 +6,7 @@ from semantic_text_splitter  import TextSplitter
 from moviepy.editor import concatenate_audioclips, AudioFileClip
 import requests
 from tools.TextTools import getSarvamLanguageCode, translateText
-from utility.util_functions import makeDir, getFilePath, getS3FilePath, model_tts, model_stt, client
+from utility.util_functions import makeDir, getFilePath, getS3FilePath, model_tts, model_stt
 from langchain_core.tools import tool, BaseTool
 from dotenv import load_dotenv
 
