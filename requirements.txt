@@ -7,8 +7,7 @@ ipython
 langchain
 langchain_community
 langchain_core
-langchain_google_genai
-langchain_google_vertexai
+langchain_google_genai==2.0.0
 langgraph
 moviepy
 pandas

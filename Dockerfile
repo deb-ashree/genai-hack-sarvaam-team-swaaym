@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
     git \
     && apt-get -y install tesseract-ocr \
     && pip3 --no-cache-dir install --upgrade pip \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get install python3-tk 
 WORKDIR /app
 
 COPY . /app
