@@ -5,6 +5,7 @@ class UserInput(BaseModel):  #TypedDict, total=False
     grade : str
     subject : str
     topic : str 
+    language : str
     instructions : str
     review_status : str
     
